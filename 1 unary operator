@@ -1,42 +1,35 @@
-#include<iostream.h>
-#include<conio.h>
+#include <iostream>
+using namespace std;
 
-class complex {
-    int a, b, c;
-public:
+class Count {
+   private:
+    int value;
 
-    complex() {
+   public:
+
+    Count() : value(5) {}
+
+    void operator ++ () {
+        ++value;
     }
 
-    void getvalue() {
-        cout << "Enter the Two Numbers:";
-        cin >> a>>b;
-    }
-
-    void operator++() {
-        a = ++a;
-        b = ++b;
-    }
-
-    void operator--() {
-        a = --a;
-        b = --b;
+    void operator ++ (int) {
+        value++;
     }
 
     void display() {
-        cout << a << "+\t" << b << "i" << endl;
+        cout << "Count: " << value << endl;
     }
 };
 
-void main() {
-    clrscr();
-    complex obj;
-    obj.getvalue();
-    obj++;
-    cout << "Increment Complex Number\n";
-    obj.display();
-    obj--;
-    cout << "Decrement Complex Number\n";
-    obj.display();
-    getch();
+int main() {
+    Count count1;
+
+    count1++;
+    count1.display();
+
+    ++count1;
+
+    count1.display();
+    return 0;
 }

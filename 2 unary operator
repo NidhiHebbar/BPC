@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+          // Post increment
+          int x = 2;
+          cout << "x value: " << x << endl;
+          int y = x++;
+          cout << "y value after x++ : " << y << endl;
+          cout << "x value after x++ : " << x << endl;
+          // Pre increment
+          x = 2;
+          cout << "x value:" << x << endl;
+          y = ++x;
+          cout << "y value after ++x : " << y << endl;
+          cout << "x value after ++x : "<< x << endl;
+          // Post decrement
+          x = 7;
+          cout << "x value before decrement: " << x << endl;
+          y = x--;
+          cout << "y value after x-- : " << y << endl;
+          cout << "x value after x-- : " << x << endl;
+          // Pre decrement
+          x = 7;
+          cout << "x value: "<< x<<endl;
+          y = --x;
+          cout << "y value after --x : " << y << endl;
+          cout << "x value after --x : " << x << endl;
+          return 0;
+}
